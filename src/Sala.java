@@ -24,28 +24,7 @@ public class Sala {
         return capacidade;
     }
 
-    /*public void gerenciarfilme(Filme filme){
-        Scanner teclado = new Scanner(System.in);
 
-
-        System.out.println("DIGITE O NOME DO FILME ");
-        String nome= teclado.nextLine();
-
-        System.out.println("DIGITE O GENERO DO FILME ");
-        String genero= teclado.nextLine();
-
-        System.out.println("DIGITE A DURACAO DO FILME ");
-        String duracao= teclado.nextLine();
-
-        System.out.println("DIGITE O CODIGO DO FILME ");
-        int codigo= teclado.nextInt();
-
-        filme.setNome(nome);
-        filme.setGenero(genero);
-        filme.setDuracao(duracao);
-        filme.setCodigo(codigo);
-
-    }*/
 
     public void ApresentarFilmeSala(Filme filme, Sala sala){
 

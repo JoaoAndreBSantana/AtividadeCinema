@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Filme {
 
     private String genero;
@@ -40,5 +41,34 @@ public class Filme {
     public int getCodigo(){
         return codigo;
 
+    }
+
+    public void gerenciarFilme() {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("DIGITE O NOME DO FILME: ");
+        String nome = teclado.nextLine();
+
+        System.out.println("DIGITE O GÊNERO DO FILME: ");
+        String genero = teclado.nextLine();
+
+        System.out.println("DIGITE A DURAÇÃO DO FILME: ");
+        String duracao = teclado.nextLine();
+
+        System.out.println("DIGITE O CÓDIGO DO FILME: ");
+        int codigo = teclado.nextInt();
+
+        setNome(nome);
+        setGenero(genero);
+        setDuracao(duracao);
+        setCodigo(codigo);
+    }
+
+    public void apresentarFilme(){
+
+        System.out.println("Nome do filme: " + getNome());
+        System.out.println("Genero do filme: " + getGenero());
+        System.out.println("Duracao do filme: " + getDuracao());
+        System.out.println("Codigo do filme:" + getCodigo());
     }
 }

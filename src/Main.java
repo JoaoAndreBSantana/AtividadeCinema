@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int condicao;
         int op;
@@ -17,12 +17,14 @@ public class Main {
 
 
             if(condicao==1){
-                sala1.gerenciarSalaFilme(filme1,sala1);
+                sala1.gerenciarSala();
+                filme1.gerenciarFilme();
                 System.out.println("DESEJA APRESENTAR INFORMAÇÕES CADASTRADAS?\nsim(1)\nnao(2)");
                 op= entrada.nextInt();
                 switch (op) {
                     case 1:
-                       sala1.ApresentarFilmeSala(filme1,sala1);
+                       sala1.apresentarSala();
+                       filme1.apresentarFilme();
                         break;
                     case 2:
                         System.out.println("voltando para escolhas");

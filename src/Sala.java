@@ -26,48 +26,26 @@ public class Sala {
 
 
 
-    public void ApresentarFilmeSala(Filme filme, Sala sala){
+    public void apresentarSala(){
 
-        System.out.println("Capacidade da Sala: " + sala.getCapacidade());
+        System.out.println("Capacidade da Sala: " + getCapacidade());
         System.out.println("Código da Sala: " +getCod());
-        System.out.println("Nome do filme: " + filme.getNome());
-        System.out.println("Genero do filme: " + filme.getGenero());
-        System.out.println("Duracao do filme: " + filme.getDuracao());
-        System.out.println("Codigo do filme:" + filme.getCodigo());
+
     }
-    public void gerenciarSalaFilme(Filme filme, Sala sala){
+
+    public void gerenciarSala() {
         Scanner teclado = new Scanner(System.in);
 
-
         System.out.println("DIGITE A CAPACIDADE DA SALA: ");
-        int capacidade= teclado.nextInt();
-        teclado.nextLine();
-        System.out.println("DIGITE O CÓDIGO DA SALA:  ");
-        String cod= teclado.nextLine();
+        int capacidade = teclado.nextInt();
+        teclado.nextLine();  // Limpar o buffer
 
-    sala.setCod(cod);
-    sala.setCapacidade(capacidade);
+        System.out.println("DIGITE O CÓDIGO DA SALA: ");
+        String cod = teclado.nextLine();
 
-
-        System.out.println("DIGITE O NOME DO FILME ");
-        String nome= teclado.nextLine();
-
-        System.out.println("DIGITE O GENERO DO FILME ");
-        String genero= teclado.nextLine();
-
-        System.out.println("DIGITE A DURACAO DO FILME ");
-        String duracao= teclado.nextLine();
-
-        System.out.println("DIGITE O CODIGO DO FILME ");
-        int codigo= teclado.nextInt();
-
-        filme.setNome(nome);
-        filme.setGenero(genero);
-        filme.setDuracao(duracao);
-        filme.setCodigo(codigo);
-
+        setCapacidade(capacidade);
+        setCod(cod);
     }
-
 
 }
 

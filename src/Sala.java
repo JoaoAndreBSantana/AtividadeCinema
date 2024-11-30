@@ -24,7 +24,7 @@ public class Sala {
         return capacidade;
     }
 
-    public void gerenciarfilme(Filme filme){
+    /*public void gerenciarfilme(Filme filme){
         Scanner teclado = new Scanner(System.in);
 
 
@@ -45,7 +45,7 @@ public class Sala {
         filme.setDuracao(duracao);
         filme.setCodigo(codigo);
 
-    }
+    }*/
 
     public void ApresentarFilmeSala(Filme filme, Sala sala){
 
@@ -56,7 +56,7 @@ public class Sala {
         System.out.println("Duracao do filme: " + filme.getDuracao());
         System.out.println("Codigo do filme:" + filme.getCodigo());
     }
-    public void gerenciarsala(){
+    public void gerenciarSalaFilme(Filme filme, Sala sala){
         Scanner teclado = new Scanner(System.in);
 
 
@@ -66,10 +66,26 @@ public class Sala {
         System.out.println("DIGITE O CÓDIGO DA SALA:  ");
         String cod= teclado.nextLine();
 
+    sala.setCod(cod);
+    sala.setCapacidade(capacidade);
 
-        this.setCapacidade(capacidade);
-        this.setCod(cod);
 
+        System.out.println("DIGITE O NOME DO FILME ");
+        String nome= teclado.nextLine();
+
+        System.out.println("DIGITE O GENERO DO FILME ");
+        String genero= teclado.nextLine();
+
+        System.out.println("DIGITE A DURACAO DO FILME ");
+        String duracao= teclado.nextLine();
+
+        System.out.println("DIGITE O CODIGO DO FILME ");
+        int codigo= teclado.nextInt();
+
+        filme.setNome(nome);
+        filme.setGenero(genero);
+        filme.setDuracao(duracao);
+        filme.setCodigo(codigo);
 
     }
 

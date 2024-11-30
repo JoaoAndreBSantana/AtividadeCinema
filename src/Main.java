@@ -11,14 +11,13 @@ public class Main {
         System.out.println("--SISTEMA DE CINEMA--");
         System.out.println("----------------------");
         while(true){
-            System.out.println("ESCOLHAS:\n------------------\nGERENCIAR FILME(1)");
-            System.out.println("GERENCIAR SALA(2)");
-            System.out.println("SAIR(3)");
+            System.out.println("ESCOLHAS:\n------------------\nGERENCIAR SALA(1)");
+            System.out.println("SAIR(2)");
             condicao = entrada.nextInt();
 
 
             if(condicao==1){
-                sala1.gerenciarfilme(filme1);
+                sala1.gerenciarSalaFilme(filme1,sala1);
                 System.out.println("DESEJA APRESENTAR INFORMAÇÕES CADASTRADAS?\nsim(1)\nnao(2)");
                 op= entrada.nextInt();
                 switch (op) {
@@ -35,9 +34,7 @@ public class Main {
 
                         break;
                 }
-            }else if(condicao==2){
-                sala1.gerenciarsala();
-            }else if (condicao==3){
+            }else if (condicao==2){
                 System.out.println("saindo...");
                 break;
             }else{
